@@ -1,0 +1,160 @@
+<!DOCTYPE html5>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="slider">
+            <div class="slider_element se1" onclick='update_slider(true)'>
+                <h1>Memorize events!</h1>
+            </div>
+            <div class="slider_element se2" onclick='update_slider(true)'>
+                <h1>Create notes!</h1>
+            </div>
+            <div class="slider_element se3" onclick='update_slider(true)'>
+                <h1>Organize memories!</h1>
+            </div>
+        </div>
+        <div class="main_menu">
+            <h2 onclick="dropdown(this)">Profile</h2>
+            <div class="mm_dropdown">
+                <a href="#" class="mm_subitem">Login</a>
+                <hr class="mm_subitem_hr">
+                <a href="#" class="mm_subitem">Logout</a>
+                <hr class="mm_subitem_hr">
+                <a href="#" class="mm_subitem">Settings</a>
+            </div>
+            <span class="mm_divider"></span>
+            <h2 onclick="dropdown(this)">My diary</h2>
+            <div class="mm_dropdown">
+                <a href="#" class="mm_subitem">Past</a>
+                <hr class="mm_subitem_hr">
+                <a href="#" class="mm_subitem">Future</a>
+                <hr class="mm_subitem_hr">
+                <a href="#" class="mm_subitem">All</a>
+            </div>
+            <span class="mm_divider"></span>
+            <h2 onclick="dropdown(this)">My gallery</h2>
+            <div class="mm_dropdown">
+                <a href="#" class="mm_subitem">Photos</a>
+                <hr class="mm_subitem_hr">
+                <a href="#" class="mm_subitem">Videos</a>
+            </div>
+            <span class="mm_divider"></span>
+            <a href="#" class="mm_item"><h2>Contact us</h2></a>
+        </div>
+        <div class="medium">
+            <div class="note">
+                <span>Date:</span>
+                <span>19.06.2019</span>
+                <br>
+                <span>Title:</span>
+                <span>ПРЕДИСЛОВИЕ</span>
+                <br>
+                <span>Status:</span>
+                <span>Past</span>
+                <br>
+                <span>Description: </span>
+                <span>
+                    Предположив, что истина есть женщина, - как? разве мы не вправе
+                    подозревать, что все философы, поскольку они были догматиками, плохо
+                    понимали женщин? что ужасающая серьезность, неуклюжая назойливость, с
+                    которой они до сих пор относились к истине, были непригодным и непристойным
+                    средством для того, чтобы расположить к себе именно женщину. Да она и не
+                    поддалась соблазну - и всякого рода догматика стоит нынче с унылым и
+                    печальным видом.
+                </span>
+            </div>
+            <div class="note">
+                <span>Date:</span>
+                <span>20.06.2019</span>
+                <br>
+                <span>Title:</span>
+                <span>Если только она вообще еще стоит!</span>
+                <br>
+                <span>Status:</span>
+                <span>Future</span>
+                <br>
+                <span>Description: </span>
+                <span>
+                    Ибо есть насмешники,
+                    утверждающие, что она пала, что вся догматика повержена, даже более того, -
+                    что она находится при последнем издыхании. Говоря серьезно, есть довольно
+                    прочные основания для надежды, что всякое догматизирование в философии,
+                    какой бы торжественный вид оно ни принимало, как бы ни старалось казаться
+                    последним словом, было только благородным ребячеством и начинанием;
+                </span>
+            </div>
+            <div class="note">
+                <span>Date:</span>
+                <span>21.06.2019</span>
+                <br>
+                <span>Title:</span>
+                <span>И быть
+                может, недалеко то время,</span>
+                <br>
+                <span>Status:</span>
+                <span>Future</span>
+                <br>
+                <span>Description: </span>
+                <span>
+                    Когда снова поймут, чего, собственно, было уже
+                    достаточно для того, чтобы служить краеугольным камнем таких величественных
+                    и безусловных философских построек, какие возводились до сих пор
+                    догматиками, - какое-нибудь народное суеверие из незапамятных времен (как,
+                    например, суеверие души, еще и доныне не переставшее бесчинствовать под
+                    видом суеверных понятий "субъект" и Я), быть может, какая-нибудь игра слов,
+                    какой-нибудь грамматический соблазн или смелое обобщение очень узких, очень
+                    личных, человеческих, слишком человеческих фактов.
+                </span>
+            </div>
+            <div class="note">
+                <span>Date:</span>
+                <span>22.06.2019</span>
+                <br>
+                <span>Title:</span>
+                <span>Будем надеяться, что
+                философия догматиков была только обетованием на тысячелетия вперед</span>
+                <br>
+                <span>Status:</span>
+                <span>Future</span>
+                <br>
+                <span>Description: </span>
+                <span>
+                    подобно
+                    тому как еще ранее того астрология, на которую было затрачено, быть может,
+                    больше труда, денег, остроумия, терпения, чем на какую-нибудь действительную
+                    науку, - ей и ее "сверхземным" притязаниям обязаны Азия и Египет высоким
+                    стилем в архитектуре. Кажется, что все великое в мире должно появляться
+                    сначала в форме чудовищной, ужасающей карикатуры, чтобы навеки запечатлеться
+                    в сердце человеческом: такой карикатурой была догматическая философия,
+                    например учение Веданты в Азии и платонизм в Европе.
+                </span>
+            </div>
+            <div class="note">
+                <span>Date:</span>
+                <span>23.06.2019</span>
+                <br>
+                <span>Title:</span>
+                <span>Не будем же
+                неблагодарны по отношению к ней</span>
+                <br>
+                <span>Status:</span>
+                <span>Future</span>
+                <br>
+                <span>Description: </span>
+                <span>
+                    Хотя мы и должны вместе с тем признать, что
+                    самым худшим, самым томительным и самым опасным из всех заблуждений было до
+                    сих пор заблуждение догматиков, именно, выдумка Платона о чистом духе и о
+                    добре самом по себе. Но теперь, когда оно побеждено, когда Европа
+                    освободилась от этого кошмара и по крайней мере может наслаждаться более
+                    здоровым... сном, мы, чью задачу составляет само бдение, являемся
+                    наследниками всей той силы, которую взрастила борьба с этим заблуждением.
+                </span>
+            </div>
+        </div>
+    </body>
+    <script src='script.js'></script>
+</html>
