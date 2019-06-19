@@ -1,0 +1,174 @@
+.medium
+{
+    width: 100%;
+    background-color: white;
+}
+.gen_note
+{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 10px 5%;
+    padding: 20px;
+    padding-bottom: 10px;
+    min-height: 100px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    font-size: 1rem;
+    font-family: Roboto;
+}
+.gen_label
+{
+    font-weight: 500;
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+    vertical-align: top;
+    font-size: 1rem;
+}
+.gen_input
+{
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 5px;
+    border: none;
+    
+    width: calc(95% - 100px);
+    resize: vertical;
+    max-width: calc(95% - 100px);
+    
+    font-family: Roboto;
+    font-size: 1rem;
+}
+.gen_hr 
+{
+    border-top: none;
+    margin-left: 110px;
+    margin-left: 10px;
+    margin-right: 3%;
+}
+.gen_file_input
+{
+
+}
+.gen_button
+{
+    margin-left: 110px;
+    margin-top: 20px;
+    display: block;
+    padding: 10px 30px;
+    color:white;
+    border: none;
+    border-radius: 5px;
+
+    font-weight: 500;
+    font-size: 1rem;
+    font-family: Roboto;
+}
+
+.create_note:hover
+{
+    border: 1px solid red;
+}
+.create_note
+{
+    background-color: rgb(255, 199, 199);
+}
+.cn_label
+{
+}
+.cn_input:focus
+{
+    background-color: white;
+    color: black;
+}
+.cn_input
+{
+    background-color: rgb(255, 232, 232);
+    color: rgb(95, 95, 95);
+}
+.cn_hr 
+{
+    border-bottom: 1px solid rgb(255, 109, 83);
+}
+.cn_file_input
+{
+    
+}
+.cn_button:hover
+{
+    background-color: red;
+    cursor: pointer;
+}
+.cn_button
+{
+    color:white;
+    background-color: rgb(255, 109, 83);
+}
+
+.note:hover
+{
+    border: 1px solid rgb(0, 179, 255);
+}
+.note
+{
+    background-color: rgb(203, 239, 253);
+}
+.n_label
+{
+}
+.n_input:focus
+{
+    background-color: white;
+    color: black;
+}
+.n_input
+{
+    overflow: visible;
+    background-color: transparent;
+    color: black;
+}
+.n_hr 
+{
+    border-bottom: 1px solid rgb(0, 179, 255);
+}
+.n_button:hover
+{
+    background-color: rgb(0, 179, 255);
+    cursor: pointer;
+}
+.n_button
+{
+    display: none;
+    background-color: rgb(51, 194, 255);
+}
+.n_media
+{
+    width: 10rem;
+    height: 10rem;
+    object-fit: contain;
+}
+
+@media only screen and (max-width: 400px) 
+{
+    .gen_input
+    {
+        display: block;
+        width: 95%;
+        max-width: 95%;
+    }
+    .gen_label
+    {
+        text-align: left;
+        width: inherit;
+    }
+    .gen_button
+    {
+        margin-left: 1%;
+        padding: 10px 5%;
+    }
+    .gen_file_input
+    {
+        display: block;
+        width: 95%;
+        max-width: 95%;
+    }
+}

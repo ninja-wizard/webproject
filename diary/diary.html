@@ -1,0 +1,201 @@
+<!DOCTYPE html5>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../style.css">
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <div class="slider">
+            <div class="slider_element se1" onclick='update_slider(true)'>
+                <h1>Memorize events!</h1>
+            </div>
+            <div class="slider_element se2" onclick='update_slider(true)'>
+                <h1>Create notes!</h1>
+            </div>
+            <div class="slider_element se3" onclick='update_slider(true)'>
+                <h1>Organize memories!</h1>
+            </div>
+        </div>
+        <div class="main_menu">
+            <h2 onclick="dropdown(this)">Profile</h2>
+            <div class="mm_dropdown">
+                <a href="../index.html" class="mm_subitem">Logout</a>
+                <hr class="mm_subitem_hr">
+                <a href="#" class="mm_subitem">Settings</a>
+            </div>
+            <span class="mm_divider"></span><wbr>
+            <h2 onclick="dropdown(this)">My diary</h2>
+            <div class="mm_dropdown">
+                <a href="#" class="mm_subitem">Show past</a>
+                <hr class="mm_subitem_hr">
+                <a href="#" class="mm_subitem">Show future</a>
+                <hr class="mm_subitem_hr">
+                <a href="#" class="mm_subitem">Show all</a>
+            </div>
+            <span class="mm_divider"></span><wbr>
+            <h2 onclick="dropdown(this)">My gallery</h2>
+            <div class="mm_dropdown">
+                <a href="#" class="mm_subitem">Photos</a>
+                <hr class="mm_subitem_hr">
+                <a href="#" class="mm_subitem">Videos</a>
+            </div>
+            <span class="mm_divider"></span><wbr>
+            <a href="#" class="mm_item"><h2>Contact us</h2></a>
+        </div>
+        <div class="medium">
+            <div class="gen_note create_note">
+                <form name="create_note" action="#" method="POST" enctype="multipart/form-data" onsubmit="return add_note(this)">
+                    <div class="gen_label cn_label">Date:</div>
+                    <input type="date" class="gen_input cn_input" required name="date">
+                    <hr class="gen_hr cn_hr">
+                    <div class="gen_label cn_label">Title:</div>
+                    <textarea class="gen_input cn_input" rows="1" required name="title"></textarea>
+                    <hr class="gen_hr cn_hr">
+                    <div class="gen_label cn_label">Description: </div>
+                    <textarea class="gen_input cn_input" rows="4" name="desc"></textarea>
+                    <hr class="gen_hr cn_hr">
+                    <div class="gen_label cn_label">Media: </div>
+                    <input type="file" accept="image*/video*/" class="gen_file_input cn_file_input" multiple name="files">
+                    <input type="submit" class="gen_button cn_button" value="Create note!">
+                </form>
+            </div>
+            <div class="content">
+                <div class="gen_note note">
+                    <form name="edit_note">
+                        <div class="gen_label n_label">Date:</div>
+                        <input type="date" class="gen_input n_input" required disabled value="2019-06-18">
+                        <hr class="gen_hr n_hr">
+                        <div class="gen_label n_label">Title:</div>
+                        <textarea class="gen_input n_input" rows="1" required disabled>
+ПРЕДИСЛОВИЕ
+                                    </textarea>
+                        <hr class="gen_hr n_hr">
+                        <div class="gen_label n_label">Description: </div>
+                        <textarea class="gen_input n_input" rows="4" disabled>
+Предположив, что истина есть женщина, - как? разве мы не вправе
+подозревать, что все философы, поскольку они были догматиками, плохо
+понимали женщин? что ужасающая серьезность, неуклюжая назойливость, с
+которой они до сих пор относились к истине, были непригодным и непристойным
+средством для того, чтобы расположить к себе именно женщину. Да она и не
+поддалась соблазну - и всякого рода догматика стоит нынче с унылым и
+печальным видом.
+                                    </textarea>
+                        <input type="submit" class="gen_button n_button" value="Edit note">
+                        <hr class="gen_hr n_hr">
+                        <img src="../media/1.webp" class="n_media" alt="1.webp">
+                        <img src="../media/2.png" class="n_media" alt="2.png">
+                        <img src="../media/3.webp" class="n_media" alt="3.webp">
+                        <img src="../media/4.png" class="n_media" alt="4.png">
+                        <img src="../media/5.png" class="n_media" alt="5.png">
+                        <img src="../media/6.png" class="n_media" alt="6.png">
+                    </form>
+                </div>
+                <div class="gen_note note">
+                    <form name="edit_note">
+                        <div class="gen_label n_label">Date:</div>
+                        <input type="date" class="gen_input n_input" required disabled value="2019-06-19">
+                        <hr class="gen_hr n_hr">
+                        <div class="gen_label n_label">Title:</div>
+                        <textarea class="gen_input n_input" rows="1" required disabled>
+Если только она вообще еще стоит!
+                                    </textarea>
+                        <hr class="gen_hr n_hr">
+                        <div class="gen_label n_label">Description: </div>
+                        <textarea class="gen_input n_input" rows="4" disabled>
+Ибо есть насмешники,
+утверждающие, что она пала, что вся догматика повержена, даже более того, -
+что она находится при последнем издыхании. Говоря серьезно, есть довольно
+прочные основания для надежды, что всякое догматизирование в философии,
+какой бы торжественный вид оно ни принимало, как бы ни старалось казаться
+последним словом, было только благородным ребячеством и начинанием;
+                                    </textarea>
+                        <input type="submit" class="gen_button n_button" value="Edit note">
+                        <hr class="gen_hr n_hr">
+                        <video class="n_media" controls>
+                            <source src="../media/v1.mp4" type="video/mp4">
+                                Error, video not supported.
+                        </video>
+                        <video class="n_media" controls>
+                            <source src="../media/v2.mp4" type="video/mp4">
+                            Error, video not supported.
+                        </video>
+                    </form>
+                </div>
+                <div class="gen_note note">
+                    <form name="edit_note">
+                        <div class="gen_label n_label">Date:</div>
+                        <input type="date" class="gen_input n_input" required disabled value="2019-06-20">
+                        <hr class="gen_hr n_hr">
+                        <div class="gen_label n_label">Title:</div>
+                        <textarea class="gen_input n_input" rows="1" required disabled>
+И быть может, недалеко то время,
+                                    </textarea>
+                        <hr class="gen_hr n_hr">
+                        <div class="gen_label n_label">Description: </div>
+                        <textarea class="gen_input n_input" rows="4" disabled>
+Когда снова поймут, чего, собственно, было уже
+достаточно для того, чтобы служить краеугольным камнем таких величественных
+и безусловных философских построек, какие возводились до сих пор
+догматиками, - какое-нибудь народное суеверие из незапамятных времен (как,
+например, суеверие души, еще и доныне не переставшее бесчинствовать под
+видом суеверных понятий "субъект" и Я), быть может, какая-нибудь игра слов,
+какой-нибудь грамматический соблазн или смелое обобщение очень узких, очень
+личных, человеческих, слишком человеческих фактов.
+                                    </textarea>
+                        <input type="submit" class="gen_button n_button" value="Edit note">
+                    </form>
+                </div>
+                <div class="gen_note note">
+                    <form name="edit_note">
+                        <div class="gen_label n_label">Date:</div>
+                        <input type="date" class="gen_input n_input" required disabled value="2019-06-21">
+                        <hr class="gen_hr n_hr">
+                        <div class="gen_label n_label">Title:</div>
+                        <textarea class="gen_input n_input" rows="1" required disabled>
+Будем надеяться, что философия догматиков была только обетованием на тысячелетия вперед
+                                    </textarea>
+                        <hr class="gen_hr n_hr">
+                        <div class="gen_label n_label">Description: </div>
+                        <textarea class="gen_input n_input" rows="4" disabled>
+подобно тому как еще ранее того астрология, на которую было затрачено, быть может,
+больше труда, денег, остроумия, терпения, чем на какую-нибудь действительную
+науку, - ей и ее "сверхземным" притязаниям обязаны Азия и Египет высоким
+стилем в архитектуре. Кажется, что все великое в мире должно появляться
+сначала в форме чудовищной, ужасающей карикатуры, чтобы навеки запечатлеться
+в сердце человеческом: такой карикатурой была догматическая философия,
+например учение Веданты в Азии и платонизм в Европе.
+                                    </textarea>
+                        <input type="submit" class="gen_button n_button" value="Edit note">
+                    </form>
+                </div>
+                <div class="gen_note note">
+                    <form name="edit_note">
+                        <div class="gen_label n_label">Date:</div>
+                        <input type="date" class="gen_input n_input" required disabled value="2019-06-22">
+                        <hr class="gen_hr n_hr">
+                        <div class="gen_label n_label">Title:</div>
+                        <textarea class="gen_input n_input" rows="1" required disabled>
+Не будем же неблагодарны по отношению к ней
+                                    </textarea>
+                        <hr class="gen_hr n_hr">
+                        <div class="gen_label n_label">Description: </div>
+                        <textarea class="gen_input n_input" rows="4" disabled>
+Хотя мы и должны вместе с тем признать, что
+самым худшим, самым томительным и самым опасным из всех заблуждений было до
+сих пор заблуждение догматиков, именно, выдумка Платона о чистом духе и о
+добре самом по себе. Но теперь, когда оно побеждено, когда Европа
+освободилась от этого кошмара и по крайней мере может наслаждаться более
+здоровым... сном, мы, чью задачу составляет само бдение, являемся
+наследниками всей той силы, которую взрастила борьба с этим заблуждением.
+                                    </textarea>
+                        <input type="submit" class="gen_button n_button" value="Edit note">
+                    </form>
+                </div>
+            </div>
+            
+        </div>
+    </body>
+    <script src='../script.js'></script>
+    <script src='./script.js'></script>
+</html>
