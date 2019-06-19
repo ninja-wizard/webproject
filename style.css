@@ -1,6 +1,5 @@
 body
 {
-    font-family: Verdana;
     margin: 0;
 }
 .upper
@@ -12,7 +11,7 @@ body
 {
     width: 100%;
 }
-@keyframes appear 
+@keyframes showhide
 {
     0% {
         opacity: 0;
@@ -39,7 +38,7 @@ body
     width:100%;
     position: relative;
 
-    animation-name: appear;
+    animation-name: showhide;
     animation-duration: 4s;
 }
 h1
@@ -53,7 +52,7 @@ h1
 
     color: white;
     font-family: Verdana;
-    font-size: 48px;
+    font-size: 4rem;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 .se1
@@ -78,6 +77,7 @@ h1
     padding: 20px 0;
     width: calc(100%-2px);
     background-color: white;
+    z-index: 1;
     text-align: center;
     border: 1px solid rgb(180, 180, 180);
 }
@@ -90,7 +90,8 @@ h2
 {
     display: inline;
     margin: 20px;
-    font-size: 24px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2rem;
     font-weight: normal;
     color: rgb(180, 180, 180);
 }
@@ -104,7 +105,16 @@ h2
     position: relative;
     top: 2px;
     border-left: 2px solid rgb(180, 180, 180);
-    height: 24px;
+    height: 2rem;
+}
+@keyframes appear
+{
+    from {
+        max-height: 0;
+    }
+    to {
+        max-height: 500px;
+    }
 }
 .mm_dropdown
 {
@@ -113,9 +123,12 @@ h2
     border: 1px solid rgb(180, 180, 180);
     background-color: white;
     text-align: left;
-    padding: 20px;
-    z-index: 1;
+    z-index: 2;
     border-radius: 5%;
+    overflow: hidden;
+
+    animation-name: appear;
+    animation-duration: 1s;
 }
 .mm_subitem:hover
 {
@@ -123,6 +136,8 @@ h2
 }
 .mm_subitem
 {
+    margin: 10px 20px;
+    font-size: 1rem;
     font-family: Verdana;
     display: block;
     text-decoration: none;
@@ -130,9 +145,11 @@ h2
 }
 .mm_subitem_hr
 {
+    width: 100%;
     display: block;
     text-decoration: none;
-    color: rgb(200, 200, 200);
+    border-top: 1px solid rgb(180, 180, 180);
+    border-bottom: none;
 }
 
 
@@ -141,11 +158,154 @@ h2
     width: 100%;
     background-color: white;
 }
+.gen_note
+{
+    margin: 10px 5%;
+    padding: 20px;
+    padding-bottom: 10px;
+    min-height: 100px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    font-size: 1rem;
+    font-family: Roboto;
+}
+.gen_label
+{
+    font-weight: 500;
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+    vertical-align: top;
+    font-size: 1rem;
+}
+.gen_input
+{
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 5px;
+    border: none;
+    
+    width: calc(95% - 100px);
+    resize: vertical;
+    max-width: calc(95% - 100px);
+    
+    font-family: Roboto;
+    font-size: 1rem;
+}
+.gen_hr 
+{
+    border-top: none;
+    margin-left: 110px;
+    margin-left: 10px;
+    margin-right: 3%;
+}
+.gen_button
+{
+    margin-left: 110px;
+    margin-top: 20px;
+    display: block;
+    padding: 10px 30px;
+    color:white;
+    border: none;
+    border-radius: 5px;
+
+    font-size: 1rem;
+    font-family: Roboto;
+}
+
+.create_note:hover
+{
+    border: 1px solid red;
+}
+.create_note
+{
+    background-color: rgb(255, 199, 199);
+}
+.cn_label
+{
+}
+.cn_input:focus
+{
+    background-color: white;
+    color: black;
+}
+.cn_input
+{
+    background-color: rgb(255, 232, 232);
+    color: rgb(95, 95, 95);
+}
+.cn_hr 
+{
+    border-bottom: 1px solid rgb(255, 109, 83);
+}
+.cn_button:hover
+{
+    background-color: red;
+    cursor: pointer;
+}
+.cn_button
+{
+    color:white;
+    background-color: rgb(255, 109, 83);
+}
+
+.note:hover
+{
+    border: 1px solid rgb(0, 179, 255);
+}
 .note
 {
-    margin: 50px;
-    padding: 20px;
-    min-height: 100px;
-    background-image: url("./images/paper.jpg");
-    background-size: cover;
+    background-color: rgb(203, 239, 253);
+}
+.n_label
+{
+}
+.n_input:focus
+{
+    background-color: white;
+    color: black;
+}
+.n_input
+{
+    overflow: visible;
+    background-color: transparent;
+    color: black;
+}
+.n_hr 
+{
+    border-bottom: 1px solid rgb(0, 179, 255);
+}
+.n_button:hover
+{
+    background-color: rgb(0, 179, 255);
+    cursor: pointer;
+}
+.n_button
+{
+    display: none;
+    background-color: rgb(51, 194, 255);
+}
+
+@media only screen and (max-width: 400px) 
+{
+    .gen_input
+    {
+        display: block;
+        width: 95%;
+        max-width: 95%;
+    }
+    .gen_label
+    {
+        text-align: left;
+        width: inherit;
+    }
+    .gen_button
+    {
+        margin-left: 1%;
+        padding: 10px 5%;
+    }
+    html 
+    {
+        font-size: 4vw;
+    }
 }

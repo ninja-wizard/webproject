@@ -20,9 +20,10 @@ var slider_interval = setInterval(update_slider, 4000);
 
 function dropdown(item)
 {
-    item = item.nextElementSibling;
+    var item = item.nextElementSibling;
+    item.style.display = "none";
     item.style.display = "block";
-    item.style.left = event.clientX;    
+    item.style.left = event.clientX;
 }
 window.onclick = function (event) {
     if (!event.target.matches('h2')) {
