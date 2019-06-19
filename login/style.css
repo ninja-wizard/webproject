@@ -1,9 +1,17 @@
+.container
+{
+    background-image: url("../images/texture.jpg");
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
 .login
 {
-
+    background-color: white;
     width: 50%;
     margin: auto;
-    margin-top: 20px;
     border: 1px solid rgb(121, 121, 121);
     padding: 5px;
     color: black;

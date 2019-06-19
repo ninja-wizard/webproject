@@ -1,0 +1,68 @@
+<!DOCTYPE html5>
+<html>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=
+    AIzaSyAtYz1I3FnJWkDACS_661xVbK1qgCW0IDY
+    &callback=initMap" type="text/javascript"></script>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../style.css">
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <div class="slider">
+            <div class="slider_element se1" onclick='update_slider(true)'>
+                <h1>Memorize events!</h1>
+            </div>
+            <div class="slider_element se2" onclick='update_slider(true)'>
+                <h1>Create notes!</h1>
+            </div>
+            <div class="slider_element se3" onclick='update_slider(true)'>
+                <h1>Organize memories!</h1>
+            </div>
+        </div>
+        <div class="main_menu">
+            <h2 onclick="dropdown(this)">Profile</h2>
+            <div class="mm_dropdown">
+                <a href="../index.html" class="mm_subitem">Logout</a>
+                <hr class="mm_subitem_hr">
+                <a href="#" class="mm_subitem">Settings</a>
+            </div>
+            <span class="mm_divider"></span><wbr>
+            <h2 onclick="dropdown(this)">My diary</h2>
+            <div class="mm_dropdown">
+                <a href="../diary/diary.html" class="mm_subitem">Show past</a>
+                <hr class="mm_subitem_hr">
+                <a href="../diary/diary.html" class="mm_subitem">Show future</a>
+                <hr class="mm_subitem_hr">
+                <a href="../diary/diary.html" class="mm_subitem">Show all</a>
+            </div>
+            <span class="mm_divider"></span><wbr>
+            <h2 onclick="dropdown(this)">My gallery</h2>
+            <div class="mm_dropdown">
+                <a href="#" class="mm_subitem">Photos</a>
+                <hr class="mm_subitem_hr">
+                <a href="#" class="mm_subitem">Videos</a>
+            </div>
+            <span class="mm_divider"></span><wbr>
+            <a href="../contacts/contacts.html" class="mm_item"><h2>Contact us</h2></a>
+        </div>
+
+        <div class="container">
+            <div class="map_container">
+                <h3>I live here!</h3>
+                <div id="map"></div>
+            </div>
+            <div class="info_container">
+                <div class="info">
+                    <img class="author" src="../images/author.jpg">
+                    <h4 class="tag">Kyōko Toshinō. This is me!</h4>
+                </div>
+                <h4>Phone: (123)-456-78-90</h4>
+                <h4>Email: toshinokyoko<wbr>@yuruyuri<wbr>.com</h4>
+            </div>
+        </div>
+    </body>
+    
+    <script src='../script.js'></script>
+    <script src='./script.js'></script>
+</html>

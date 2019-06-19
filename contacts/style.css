@@ -1,0 +1,73 @@
+.container
+{
+    display: flex;
+    flex-direction: row;
+
+    background-image: url("../images/texture.jpg");
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    padding: 2rem 2%;
+}
+.map_container
+{
+    width: 50%;
+}
+#map
+{
+    height: 30rem;
+    margin: auto;
+    position: static;
+    overflow: inherit;
+}
+h3
+{
+    margin: 1rem 0;
+    padding: 1rem;
+    color: rgb(85, 85, 85);
+    background-color: white;
+    font-size: 1.5rem;
+    font-family: Roboto;
+    text-align: center;
+}
+.info_container
+{
+    padding-left: 1rem;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+h4
+{
+    margin: 1rem 0;
+    padding: 1rem;
+    color: rgb(85, 85, 85);
+    background-color: white;
+    font-size: 1rem;
+    font-family: Roboto;
+    text-align: center;
+}
+.info 
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: space-between;
+}
+.author
+{
+    display: block;
+    margin: 1rem 1rem;
+    width: 10rem;
+    height: 10rem;
+
+    border-radius: 50%;
+    color: white;
+}
+.tag
+{
+    border-radius: 1rem;
+}
